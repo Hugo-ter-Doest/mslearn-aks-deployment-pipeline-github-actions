@@ -27,12 +27,12 @@ jobs:
           context: .
           push: true
           tags: ${{secrets.ACR_NAME}}/contoso-website:latest
-    deploy:
-      runs-on: ubuntu-20.04
-      needs: build_push_image
-      steps:
-        - uses: actions/checkout@v2
-        - name: Install Helm
-          uses: Azure/setup-helm@v1
-          with:
-            version: v3.10.3
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: build_push_image
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Helm
+        uses: Azure/setup-helm@v1
+        with:
+          version: v3.10.3
