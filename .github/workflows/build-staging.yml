@@ -36,3 +36,9 @@ jobs:
         uses: Azure/setup-helm@v1
         with:
           version: v3.10.3
+      - name: Azure Kubernetes set context
+        uses: Azure/aks-set-context@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          resource-group: mslearn-gh-pipelines-12604
+          cluster-name: contoso-video
