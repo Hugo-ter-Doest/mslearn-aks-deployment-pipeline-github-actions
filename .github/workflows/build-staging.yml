@@ -27,3 +27,8 @@ jobs:
           context: .
           push: true
           tags: ${{secrets.ACR_NAME}}/contoso-website:latest
+    deploy:
+      runs-on: ubuntu-20.04
+      needs: build_push_image
+      steps:
+        - uses: actions/checkout@v2
