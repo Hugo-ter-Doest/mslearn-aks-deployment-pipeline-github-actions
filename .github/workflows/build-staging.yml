@@ -51,6 +51,6 @@ jobs:
             --wait \
             --namespace staging \
             contoso-website \
-            ./mslearn-aks-deployment-pipeline-github-actions/kubernetes/contose-website \
+            ./kubernetes/contose-website \
             --set image.repository=${{ secrets.ACR_NAME }} \
             --set dns.name=${{ secrets.DNS_NAME }}
