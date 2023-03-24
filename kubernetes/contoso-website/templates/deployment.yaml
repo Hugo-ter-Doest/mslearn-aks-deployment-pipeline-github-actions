@@ -12,7 +12,7 @@ spec:
         app: contoso-website
     spec:
       containers:
-        - image: contose-website
+        - image: contoso-website
           name: contoso-website
           resources:
             requests:
